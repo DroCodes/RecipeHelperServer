@@ -8,7 +8,6 @@ import { RecipeRouter } from "./api-routes/RecipeRoute";
 import { imageRouter } from "./api-routes/recipeImageRoute";
 
 const app = express();
-const upload = multer({ dest: "./uploads" });
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,7 +17,7 @@ app.use("/static", express.static("uploads"));
 app.use("/recipes", RecipeRouter);
 app.use("/uploadFile", imageRouter);
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log("Server started on port 8080");
     main().catch((err) => {
         console.log(err);
