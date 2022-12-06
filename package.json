@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon app.ts",
-    "start-dev": "app.ts"
+    "start-dev": "nodemon app.ts",
+    "start": "app.ts"
   },
   "author": "",
   "license": "ISC",
